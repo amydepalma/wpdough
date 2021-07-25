@@ -18,4 +18,10 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header>Header</header>
+<!--TODO: Skip Link -->
+
+<header>
+	<?php get_template_part('template-parts/common/main-nav'); ?>
+</header>
+
+<main id="main">
