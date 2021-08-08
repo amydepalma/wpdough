@@ -26,3 +26,4 @@ node_modules
 Thumbs.db
 sftp-config.json
 *.vscode
+vendor/*

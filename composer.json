@@ -1,0 +1,39 @@
+{
+	"name": "2206-design/wpdough",
+	"license": "MIT",
+	"description": "Default Composer packages for WPdough",
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": [
+				"wpackagist-plugin/*",
+				"wpackagist-theme/*"
+			]
+		}
+	],
+	"authors": [
+		{
+			"name": "2206 Design",
+			"email": "hello@2206.design",
+			"homepage": "https://2206.design"
+		}
+	],
+	"keywords": [
+		"wordpress"
+	],
+	"require": {
+		"wpackagist-plugin/redirection": "^5.1",
+		"wpackagist-plugin/enable-media-replace": "^3.2",
+		"wpackagist-plugin/safe-svg": "^1.9",
+		"wpackagist-plugin/simple-custom-post-order": "^2.5",
+		"wpackagist-plugin/fakerpress": "^0.5.1"
+	},
+	"extra": {
+		"installer-paths": {
+			"../../plugins/{$name}": [
+				"type:wordpress-plugin"
+			]
+		}
+	}
+}
