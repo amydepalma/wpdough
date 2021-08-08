@@ -27,7 +27,8 @@
 		"wpackagist-plugin/enable-media-replace": "^3.2",
 		"wpackagist-plugin/safe-svg": "^1.9",
 		"wpackagist-plugin/simple-custom-post-order": "^2.5",
-		"wpackagist-plugin/fakerpress": "^0.5.1"
+		"wpackagist-plugin/fakerpress": "^0.5.1",
+		"wpackagist-plugin/acf-extended": "0.8.8.4"
 	},
 	"extra": {
 		"installer-paths": {
