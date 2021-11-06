@@ -19,4 +19,17 @@
 	}
 
 	add_action('wp_enqueue_scripts', 'wpdough_enqueue_scripts');
+
+/**
+ * Register Menus
+ */
+	function register_menus() {
+		register_nav_menus(
+			array(
+				'main-nav' => __( 'Main Navigation' ),
+				'footer-nav' => __( 'Footer Navigation' )
+			)
+		);
+	}
+	add_action('init', 'register_menus');
 ?>

@@ -7,10 +7,5 @@
 ?>
 
 <nav>
-	<ul>
-		<li><a href="#">Link</a></li>
-		<li><a href="#">Link</a></li>
-		<li><a href="#">Link</a></li>
-		<li><a href="#">Link</a></li>
-	</ul>
+	<?php wp_nav_menu( array( 'theme_location' => 'main-nav' ) ); ?>
 </nav>
