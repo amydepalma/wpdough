@@ -1,0 +1,21 @@
+/* Core reset, mixins, vars, and utils */
+@import "core/reset";
+@import "core/utils";
+
+/* Dependencies  */
+
+/* Common */
+@import "common/type";
+@import "common/buttons";
+@import "common/card";
+@import "common/wp-classes";
+
+/* WP Blocks */
+// @import "blocks-wp/media-text";
+@import "blocks-wp/post-terms";
+@import "blocks-wp/post";
+@import "blocks-wp/query-pagination";
+
+/* Layouts */
+@import "layouts/header";
+@import "layouts/footer";

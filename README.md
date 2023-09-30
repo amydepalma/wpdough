@@ -1,12 +1,21 @@
 # WPdough
- Wordpress Starter Kit
 
-## Setup
+Wordpress Starter Kit
 
-1. Clone the repo into themes directory:
-`https://github.com/amydepalma/wpdough.git`
-2. From the theme directory, run `composer install` to install default Wordpress plugins
+## Local Development
 
-		Manually install ACF and Yoast
+Boot your WordPress install via Local/Docker/etc and run `npm run start` from the theme to start `parcel` which watches and builds the following directories and files, forcing hot reloads on saved changes.
 
-3. From the theme directory, run `npm install` to install JS dependencies
+-   `assets/styles/main.scss`
+-   `assets/styles/editor.scss`
+-   All Javascript files inside `assets/scripts/`
+-   All assets inside `asset/images`
+-   All Javascript and SCSS files that do not begin with an `_` inside all directories inside `blocks`
+
+### Building
+
+Run `npm run build` from the theme directory to compile assets for production
+
+### Deployment
+
+Run `npm run deploy:ENV` from the theme directory to deploy where ENV is one of `staging` or `production`.
