@@ -1,40 +1,48 @@
 {
-	"name": "2206-design/wpdough",
-	"license": "MIT",
-	"description": "Default Composer packages for WPdough",
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://wpackagist.org",
-			"only": [
-				"wpackagist-plugin/*",
-				"wpackagist-theme/*"
-			]
-		}
-	],
-	"authors": [
-		{
-			"name": "2206 Design",
-			"email": "hello@2206.design",
-			"homepage": "https://2206.design"
-		}
-	],
-	"keywords": [
-		"wordpress"
-	],
-	"require": {
-		"wpackagist-plugin/redirection": "^5.1",
-		"wpackagist-plugin/enable-media-replace": "^3.2",
-		"wpackagist-plugin/safe-svg": "^1.9",
-		"wpackagist-plugin/simple-custom-post-order": "^2.5",
-		"wpackagist-plugin/fakerpress": "^0.5.1",
-		"wpackagist-plugin/acf-extended": "0.8.8.4"
-	},
-	"extra": {
-		"installer-paths": {
-			"../../plugins/{$name}": [
-				"type:wordpress-plugin"
-			]
-		}
-	}
+  "name": "WPdough",
+  "license": "MIT",
+  "description": "Composer packages for WPdough",
+  "authors": [
+    {
+      "name": "Amy DePalma",
+      "email": "amydepalma@gmail.com",
+      "homepage": "https://github.com/amydepalma"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/duplicate-post": "^4.3",
+    "wpackagist-plugin/enable-media-replace": "^3.6",
+    "wpackagist-plugin/safe-svg": "^1.9",
+    "wpackagist-plugin/wordpress-importer": "^0.7.0",
+    "wpackagist-plugin/wordfence": "^7.5",
+    "wpackagist-plugin/wp-mail-smtp": "^3.2",
+    "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.14",
+    "wpackagist-plugin/simple-custom-post-order": "^2.5",
+    "wpackagist-plugin/seo-by-rank-math": "^1.0",
+    "wpackagist-plugin/contact-form-entries": "^1.2",
+    "wpackagist-plugin/custom-block-patterns": "^1.4",
+    "wpackagist-plugin/disable-comments-rb": "^1.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "../../plugins/{$name}": ["type:wordpress-plugin"]
+    }
+  },
+  "require-dev": {
+    "php-stubs/acf-pro-stubs": "^6.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
 }

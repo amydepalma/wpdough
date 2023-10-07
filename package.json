@@ -1,0 +1,17 @@
+{
+  "name": "wpdough",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "parcel": "^2.9.3"
+  },
+  "scripts": {
+    "clean": "rm -rf dist/* && rm -rf .parcel-cache",
+    "start": "npm run clean && parcel watch blocks/**/*.scss blocks/**/*.js assets/scripts/*.js assets/styles/main.scss assets/styles/editor.scss assets/images/* --no-source-maps",
+    "build": "npm run clean && parcel build blocks/**/*.scss blocks/**/*.js assets/scripts/*.js assets/styles/main.scss assets/styles/editor.scss assets/images/* --no-source-maps"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "author": "Amy DePalma",
+  "license": "ISC"
+}

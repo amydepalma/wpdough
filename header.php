@@ -1,27 +1,33 @@
-<?php
-/**
- * Header template
- *
- * @package WPdough
- */
-?>
-
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
-<head prefix="og: http://ogp.me/ns#">
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php wp_head(); ?>
-</head>
+<html lang="en">
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<?php wp_head() ?>
+	</head>
 
-<!--TODO: Skip Link -->
+	<body <?php body_class(); ?>>
+		<?php if (function_exists('gtm4wp_the_gtm_tag')) {
+    gtm4wp_the_gtm_tag();
+  } ?>
 
-<header>
-	<?php get_template_part('template-parts/common/main-nav'); ?>
-</header>
+		<a class="visually-hidden-focusable" id="skip-to-content" href="#content">Skip to main content</a>
 
-<main id="main">
+		<?php wp_body_open() ?>
+
+		<?php if (!get_field('hide_header')) : ?>
+		<header class="top">
+			<nav class="has-global-padding is-layout-constrained">
+				<?php
+						wp_nav_menu([
+							'theme_location'  => 'primary_navigation',
+							'menu_class'      => 'list-unstyled'
+						]);
+					?>
+			</nav>
+		</header>
+		<?php endif; ?>
+
+		<main id="content">
