@@ -1,3 +1,7 @@
+:root {
+	font-size: map-get($font-sizes, "base");
+}
+
 @for $i from 1 through 6 {
 	.is-style-h#{$i} {
 		@extend .h#{$i} !optional;

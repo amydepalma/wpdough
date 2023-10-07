@@ -1,27 +1,3 @@
-@import "mixins/color-contrast";
-@import "mixins/font-smoothing";
-@import "mixins/media";
-@import "mixins/visually-hidden";
-@import "variables";
-@import "functions";
-
-:root {
-	@each $name, $color in $theme_colors {
-		--#{$name}: #{$color};
-	}
-
-	@each $name, $size in $font-sizes {
-		--font-size-#{$name}: #{$size};
-	}
-
-	--container-width: #{$container_width};
-	--container-min-padding: #{$container_min_padding};
-	// this should never be set or changed but instead can be referenced throughout the document to provide the illusion of contained content while allowing for overflowing background images or other such visual elements
-	--container-padding: max(var(--container-min-padding), ( (100vw - var(--container-width)) / 2 ));
-
-	font-size: map-get($font-sizes, "base");
-}
-
 @each $name, $size in $font-sizes {
 	.#{$name} {
 		font-size: $size;

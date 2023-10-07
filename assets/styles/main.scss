@@ -1,21 +1,25 @@
-/* Core reset, mixins, vars, and utils */
-@import "core/reset";
-@import "core/utils";
+/* Base reset and helpers */
+@import "1-base/reset";
+@import "1-base/functions";
+@import "1-base/variables";
+@import "1-base/mixins";
 
 /* Dependencies  */
 
-/* Common */
-@import "common/type";
-@import "common/buttons";
-@import "common/card";
-@import "common/wp-classes";
+/* Core */
+@import "2-core/type";
+@import "2-core/buttons";
+@import "2-core/card";
 
-/* WP Blocks */
-// @import "blocks-wp/media-text";
-@import "blocks-wp/post-terms";
-@import "blocks-wp/post";
-@import "blocks-wp/query-pagination";
+@import "2-core/header";
+@import "2-core/footer";
 
-/* Layouts */
-@import "layouts/header";
-@import "layouts/footer";
+/* Wordpress */
+@import "3-wp/reset";
+// @import "3-wp/media-text";
+@import "3-wp/post-terms";
+@import "3-wp/post";
+@import "3-wp/query-pagination";
+
+/* Utility */
+@import "4-utility/type";

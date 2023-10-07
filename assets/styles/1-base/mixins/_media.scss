@@ -1,5 +1,3 @@
-@import "../variables";
-
 @mixin media-breakpoint-down($breakpoint-name) {
 	@media screen and (max-width: map-get($breakpoints, $breakpoint-name)) {
 		@content;
