@@ -4,6 +4,7 @@
   "description": "",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.3",
+    "modern-normalize": "^2.0.0",
     "parcel": "^2.9.3"
   },
   "scripts": {
