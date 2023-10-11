@@ -25,12 +25,10 @@
     "wpackagist-plugin/wordpress-importer": "^0.7.0",
     "wpackagist-plugin/wordfence": "^7.5",
     "wpackagist-plugin/wp-mail-smtp": "^3.2",
-    "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.14",
     "wpackagist-plugin/simple-custom-post-order": "^2.5",
     "wpackagist-plugin/seo-by-rank-math": "^1.0",
     "wpackagist-plugin/contact-form-entries": "^1.2",
-    "wpackagist-plugin/custom-block-patterns": "^1.4",
-    "wpackagist-plugin/disable-comments-rb": "^1.0"
+    "wpackagist-plugin/disable-comments": "^1.0"
   },
   "extra": {
     "installer-paths": {
