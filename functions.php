@@ -23,55 +23,6 @@ array_map(function ($file) {
  */
 define('WPDOUGH_VERSION', '1.0.0');
 
-define('WPDOUGH_YELLOW_500', '#FFC906');
-define('WPDOUGH_LIGHT_BLUE_500', '#5DA8FF');
-define('WPDOUGH_DARK_BLUE_500', '#2063B3');
-define('WPDOUGH_MAGENTA_500', '#D92F80');
-define('WPDOUGH_TEAL_500', '#06CBAD');
-define('WPDOUGH_GRAY_500', '#202020');
-define('WPDOUGH_WHITE', '#FFFFFF');
-
-/**
- * Add theme colors for Gutenberg
- */
-add_theme_support('editor-color-palette', array(
-	array(
-		'name' => 'Yellow 500',
-		'slug' => 'yellow_500',
-		'color' => WPDOUGH_YELLOW_500
-	),
-	array(
-		'name' => 'Light Blue 500',
-		'slug' => 'light_blue_500',
-		'color' => WPDOUGH_LIGHT_BLUE_500
-	),
-	array(
-		'name' => 'Dark Blue 500',
-		'slug' => 'dark_blue_500',
-		'color' => WPDOUGH_DARK_BLUE_500
-	),
-	array(
-		'name' => 'Magenta 500',
-		'slug' => 'magenta_500',
-		'color' => WPDOUGH_MAGENTA_500
-	),
-	array(
-		'name' => 'Teal 500',
-		'slug' => 'teal_500',
-		'color' => WPDOUGH_TEAL_500
-	),
-	array(
-		'name' => 'Gray 500',
-		'slug' => 'gray_500',
-		'color' => WPDOUGH_GRAY_500
-	),
-	array(
-		'name' => 'White',
-		'slug' => 'white',
-		'color' => WPDOUGH_WHITE
-	),
-));
-
 /**
  * Setup theme
  */

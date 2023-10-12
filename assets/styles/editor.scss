@@ -1,58 +1,40 @@
-// TODO: Update to use the new SCSS setup
+/* Base helpers */
+@import "1-base/functions";
+@import "1-base/variables";
+@import "1-base/mixins";
 
-/* Core reset, mixins, vars, and utils */
-// @import "core/reset";
-// @import "core/utils";
+.editor-styles-wrapper {
+	/* Base reset */
+	@import "1-base/reset";
 
-// /* Dependencies  */
+	/* Dependencies  */
 
-// /* Common */
-// @import "common/type";
-// @import "common/buttons";
-// @import "common/card";
-// @import "common/wp-classes";
+	/* Core */
+	// @import "2-core/type";
+	// 	font-family: $font-family-base;
+	// 	font-weight: $font-weight-base;
+	// 	font-size: $font-size-base;
+	// 	color: $body-color;
+	// 	line-height: $line-height-base;
 
-// /* WP Blocks */
-// // @import "blocks-wp/media-text";
-// @import "blocks-wp/post-terms";
-// @import "blocks-wp/post";
-// @import "blocks-wp/query-pagination";
+	// @import "2-core/buttons";
+	// @import "2-core/card";
+	// @import "2-core/header";
+	// @import "2-core/footer";
 
-// /* Layouts */
-// @import "layouts/header";
-// @import "layouts/footer";
+	/* Wordpress */
+	// @import "3-wp/reset";
+	// @import "3-wp/media-text";
+	// @import "3-wp/post-terms";
+	// @import "3-wp/post";
+	// @import "3-wp/query-pagination";
 
+	/* Utility */
+	// @import "4-utility/type";
+}
 
-// /* Shared */
-// @import "common/variables";
-// @import "common/functions";
-// @import "common/mixins";
-
-// .editor-styles-wrapper {
-// 	font-family: $font-family-base;
-// 	font-weight: $font-weight-base;
-// 	font-size: $font-size-base;
-// 	color: $body-color;
-// 	line-height: $line-height-base;
-
-// 	/* Other dependencies  */
-
-// 	/* Custom */
-// 	@import "common/global";
-// 	@import "common/type";
-// 	@import "common/utility";
-// 	@import "common/buttons";
-// 	@import "common/card";
-// 	@import "common/wp-classes";
-
-// 	@import "blocks-wp/media-text";
-// 	@import "blocks-wp/post-terms";
-// 	@import "blocks-wp/wp-block-post";
-// 	@import "blocks-wp/wp-block-query-pagination";
-// }
-
-// // Body gets converted to ".editor-styles-wrapper" so no need to add here
-// // https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#editor-styles
+// Body gets converted to ".editor-styles-wrapper" so no need to add here
+// https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#editor-styles
 // body {
 
 // 	// WP page title restyle so it's not so intrusive
