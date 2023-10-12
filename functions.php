@@ -16,7 +16,7 @@ define('LOCAL_DOMAIN', 'wpdough.local');
 array_map(function ($file) {
 	$filepath = "/includes/{$file}.php";
   require_once(get_stylesheet_directory() . $filepath);
-}, ['utilities', 'blocks', 'post-types', 'taxonomies', 'options-pages', 'user-roles']);
+}, ['utilities', 'blocks', 'post-types', 'taxonomies', 'options-pages']);
 
 /**
  * Define Constants
