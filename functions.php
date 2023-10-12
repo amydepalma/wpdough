@@ -28,10 +28,7 @@ define('WPDOUGH_VERSION', '1.0.0');
  */
 add_action('after_setup_theme', function() {
 
-	// this makes only the css from blocks on the page load, but it puts their css in the footer
-	add_filter('should_load_separate_core_block_assets', '__return_true');
-
-	add_post_type_support('page', 'excerpt');
+	// add_post_type_support('page', 'excerpt');
 
   /**
    * Enable plugins to manage the document title
@@ -55,13 +52,13 @@ add_action('after_setup_theme', function() {
    * Block editor features
    */
 	// Remove default patterns
-  remove_theme_support("core-block-patterns");
+  // remove_theme_support("core-block-patterns");
 
 	// Prevent loading patterns from the WordPress.org pattern directory
-  add_filter( 'should_load_remote_block_patterns', '__return_false' );
+  // add_filter( 'should_load_remote_block_patterns', '__return_false' );
 
   // Remove default block categories
-  unregister_block_pattern_category('buttons');
+  // unregister_block_pattern_category('buttons');
 
   // Editor styles
   add_theme_support("editor-styles");
@@ -89,7 +86,7 @@ function WPDOUGH_custom_block_styles($hook) {
 add_action('wp_enqueue_scripts', 'WPDOUGH_enqueue_assets', 15);
 function WPDOUGH_enqueue_assets() {
 	wp_enqueue_style('wpdough-css', asset_path('styles/main.css'), array(), WPDOUGH_VERSION, 'all');
-  	wp_enqueue_script('wpdough-js', asset_path('scripts/main.js'), array(), WPDOUGH_VERSION , true );
+	wp_enqueue_script('wpdough-js', asset_path('scripts/main.js'), array(), WPDOUGH_VERSION , true );
 }
 
 /**
@@ -103,12 +100,12 @@ register_nav_menus([
 /**
  * Adds Reusable Blocks to ACF post types
  */
-add_filter('acf/get_post_types', function ($post_types) {
-  if (!in_array('wp_block', $post_types)):
-    $post_types[] = 'wp_block';
-	endif;
-  return $post_types;
-});
+// add_filter('acf/get_post_types', function ($post_types) {
+//   if (!in_array('wp_block', $post_types)):
+//     $post_types[] = 'wp_block';
+// 	endif;
+//   return $post_types;
+// });
 
 
 /**
