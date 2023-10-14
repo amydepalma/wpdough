@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php language_attributes(); ?>">
 
-	<head>
-		<meta charset="UTF-8">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="<?php bloginfo('charset'); ?>">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 		<?php wp_head() ?>
 	</head>
 
 	<body <?php body_class(); ?>>
-		<?php if (function_exists('gtm4wp_the_gtm_tag')) {
-    gtm4wp_the_gtm_tag();
-  } ?>
-
 		<a class="visually-hidden-focusable" id="skip-to-content" href="#content">Skip to main content</a>
 
 		<?php wp_body_open() ?>
