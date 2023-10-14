@@ -33,7 +33,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-wpdough-settings"
+                "value": "wpdough-settings"
             }
         ]
     ],
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697314948
+    "modified": 1697315501
 }
