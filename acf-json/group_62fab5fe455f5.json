@@ -1,6 +1,6 @@
 {
     "key": "group_62fab5fe455f5",
-    "title": "Site Settings",
+    "title": "Theme Settings",
     "fields": [
         {
             "key": "field_64270e7112052",
@@ -33,7 +33,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "theme-general-settings"
+                "value": "acf-options-wpdough-settings"
             }
         ]
     ],
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695645256
+    "modified": 1697314948
 }
