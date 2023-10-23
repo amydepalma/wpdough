@@ -13,11 +13,17 @@ define('LOCAL_DOMAIN', 'wpdough.local');
 /**
  * Includes
  */
-array_map(function ($file) {
-	$filepath = "/includes/{$file}.php";
-  require_once(get_stylesheet_directory() . $filepath);
-}, ['utilities', 'blocks', 'post-types', 'taxonomies']);
-
+if(!is_child_theme()){
+	array_map(function ($file) {
+		$filepath = "/includes/{$file}.php";
+		require_once(get_stylesheet_directory() . $filepath);
+	}, ['utilities', 'blocks', 'post-types', 'taxonomies']);
+} else {
+	array_map(function ($file) {
+		$filepath = "/includes/{$file}.php";
+		require_once(get_template_directory() . $filepath);
+	}, ['utilities', 'blocks', 'post-types', 'taxonomies']);
+}
 /**
  * Define Constants
  */
@@ -72,19 +78,19 @@ add_action('after_setup_theme', function() {
 });
 
 /**
- * Enqueue additional block editor assets
+ * Enqueue editor scripts & styles
  */
-add_action('enqueue_block_editor_assets', 'WPDOUGH_custom_block_styles');
-function WPDOUGH_custom_block_styles($hook) {
+add_action('enqueue_block_editor_assets', 'wpdough_custom_block_styles');
+function wpdough_custom_block_styles($hook) {
 	wp_enqueue_style('wpdough-editor-css', asset_path('styles/editor.css'), array(), WPDOUGH_VERSION, 'all');
 	wp_enqueue_script('wpdough-editor-js', asset_path('scripts/editor.js'), array('wp-blocks', 'wp-dom'), WPDOUGH_VERSION, true);
 }
 
 /**
- * Enqueue styles
+ * Enqueue frontend scripts & sctyles
  */
-add_action('wp_enqueue_scripts', 'WPDOUGH_enqueue_assets', 15);
-function WPDOUGH_enqueue_assets() {
+add_action('wp_enqueue_scripts', 'wpdough_enqueue_assets', 15);
+function wpdough_enqueue_assets() {
 	wp_enqueue_style('wpdough-css', asset_path('styles/main.css'), array(), WPDOUGH_VERSION, 'all');
 	wp_enqueue_script('wpdough-js', asset_path('scripts/main.js'), array(), WPDOUGH_VERSION , true );
 }
