@@ -230,29 +230,29 @@
 			  "name": "Pink 100"
 			},
 			{
-			  "slug": "charcoal-500",
-			  "color": "var(--charcoal-500)",
-			  "name": "Charcoal 500"
+			  "slug": "gray-500",
+			  "color": "var(--gray-500)",
+			  "name": "gray 500"
 			},
 			{
-			  "slug": "charcoal-400",
-			  "color": "var(--charcoal-400)",
-			  "name": "Charcoal 400"
+			  "slug": "gray-400",
+			  "color": "var(--gray-400)",
+			  "name": "gray 400"
 			},
 			{
-			  "slug": "charcoal-300",
-			  "color": "var(--charcoal-300)",
-			  "name": "Charcoal 300"
+			  "slug": "gray-300",
+			  "color": "var(--gray-300)",
+			  "name": "gray 300"
 			},
 			{
-			  "slug": "charcoal-200",
-			  "color": "var(--charcoal-200)",
-			  "name": "Charcoal 200"
+			  "slug": "gray-200",
+			  "color": "var(--gray-200)",
+			  "name": "gray 200"
 			},
 			{
-			  "slug": "charcoal-100",
-			  "color": "var(--charcoal-100)",
-			  "name": "Charcoal 100"
+			  "slug": "gray-100",
+			  "color": "var(--gray-100)",
+			  "name": "gray 100"
 			},
 			{
 			  "slug": "mix-yellow-green",

@@ -1,7 +1,8 @@
-/* Base helpers */
+/* Base reset and helpers */
 @import "1-base/functions";
 @import "1-base/variables";
 @import "1-base/mixins";
+
 
 .editor-styles-wrapper {
 	/* Base reset */
@@ -10,17 +11,16 @@
 	/* Dependencies  */
 
 	/* Core */
-	// @import "2-core/type";
-	// 	font-family: $font-family-base;
-	// 	font-weight: $font-weight-base;
-	// 	font-size: $font-size-base;
-	// 	color: $body-color;
-	// 	line-height: $line-height-base;
-
-	// @import "2-core/buttons";
-	// @import "2-core/card";
-	// @import "2-core/header";
-	// @import "2-core/footer";
+	@import "2-core/type";
+	@import "2-core/buttons";
+	@import "2-core/card";
+	@import "2-core/header";
+	@import "2-core/footer";
+	font-family: $ff-base;
+	font-weight: $fw-base;
+	font-size: $fs-base;
+	color: $text-base;
+	line-height: $lh-base;
 
 	/* Wordpress */
 	// @import "3-wp/reset";

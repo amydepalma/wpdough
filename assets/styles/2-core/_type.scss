@@ -1,5 +1,5 @@
 :root {
-	font-size: map-get($font-sizes, "base");
+	font-size: map-get($fs-map, "base");
 }
 
 @for $i from 1 through 6 {
