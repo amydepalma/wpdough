@@ -1,7 +1,9 @@
-@import "../../../node_modules/modern-normalize";
+@import "../../node_modules/modern-normalize";
 
-:root {
-	line-height: 1.5;
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
 }
 
 h1,
@@ -9,6 +11,7 @@ h2,
 h3,
 h4,
 h5,
+h6,
 figure,
 p,
 ol,
@@ -26,7 +29,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
 	font-size: inherit;
 	font-weight: inherit;
 }

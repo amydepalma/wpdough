@@ -1,36 +1,39 @@
-/* Base reset and helpers */
-@import "1-base/functions";
-@import "1-base/variables";
-@import "1-base/mixins";
-
+/* Core helpers */
+@import "functions";
+@import "variables";
+@import "mixins";
 
 .editor-styles-wrapper {
-	/* Base reset */
-	@import "1-base/reset";
+	/* Normalize reset */
+	@import "reset";
 
 	/* Dependencies  */
 
-	/* Core */
-	@import "2-core/type";
-	@import "2-core/buttons";
-	@import "2-core/card";
-	@import "2-core/header";
-	@import "2-core/footer";
-	font-family: $ff-base;
-	font-weight: $fw-base;
-	font-size: $fs-base;
-	color: $text-base;
-	line-height: $lh-base;
+	/* Layout */
+	@import "layout/sectioning";
+	@import "layout/container";
 
-	/* Wordpress */
-	// @import "3-wp/reset";
-	// @import "3-wp/media-text";
-	// @import "3-wp/post-terms";
-	// @import "3-wp/post";
-	// @import "3-wp/query-pagination";
+	/* Content */
+	@import "content/typography";
+	// @import "content/buttons";
 
-	/* Utility */
-	// @import "4-utility/type";
+
+
+	/* Components */
+	// @import "components/card";
+	// @import "components/header";
+	// @import "components/footer";
+	// @import "components/wp-reset";
+	// // @import "components/wp-media-text";
+	// @import "components/wp-post-terms";
+	// @import "components/wp-post";
+	// @import "components/wp-query-pagination";
+
+	/* Utilities */
+	@import "utilities/colors";
+	@import "utilities/spacing";
+	@import "utilities/text";
+	@import "utilities/miscs";
 }
 
 // Body gets converted to ".editor-styles-wrapper" so no need to add here

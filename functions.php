@@ -82,8 +82,8 @@ add_action('after_setup_theme', function() {
  */
 add_action('enqueue_block_editor_assets', 'wpdough_custom_block_styles');
 function wpdough_custom_block_styles($hook) {
-	wp_enqueue_style('wpdough-editor-css', asset_path('styles/editor.css'), array(), WPDOUGH_VERSION, 'all');
-	wp_enqueue_script('wpdough-editor-js', asset_path('scripts/editor.js'), array('wp-blocks', 'wp-dom'), WPDOUGH_VERSION, true);
+	wp_enqueue_style('wpdough-editor-css', asset_path('scss/editor.css'), array(), WPDOUGH_VERSION, 'all');
+	wp_enqueue_script('wpdough-editor-js', asset_path('js/editor.js'), array('wp-blocks', 'wp-dom'), WPDOUGH_VERSION, true);
 }
 
 /**
@@ -91,8 +91,8 @@ function wpdough_custom_block_styles($hook) {
  */
 add_action('wp_enqueue_scripts', 'wpdough_enqueue_assets', 15);
 function wpdough_enqueue_assets() {
-	wp_enqueue_style('wpdough-css', asset_path('styles/main.css'), array(), WPDOUGH_VERSION, 'all');
-	wp_enqueue_script('wpdough-js', asset_path('scripts/main.js'), array(), WPDOUGH_VERSION , true );
+	wp_enqueue_style('wpdough-css', asset_path('scss/main.css'), array(), WPDOUGH_VERSION, 'all');
+	wp_enqueue_script('wpdough-js', asset_path('js/main.js'), array(), WPDOUGH_VERSION , true );
 }
 
 /**

@@ -1,0 +1,85 @@
+:root, html, body {
+  font-family: var(--ff-base);
+	font-weight: var(--fw-base);
+	font-size: var(--fs-base);
+	color: var(--text-base);
+	line-height: var(--lh-base);
+}
+
+@each $name, $size in $fs-map {
+	.#{$name} {
+		font-size: $size;
+	}
+
+	#{$name} {
+		font-size: $size;
+	}
+}
+
+
+@for $i from 1 through 3 {
+	.hd#{$i} {
+		font-size: var(--hd#{$i});
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+	max-width: var(--textMaxWidth);
+}
+
+// .lead,
+// .is-style-lead {
+// 	font-size: rem(20);
+// }
+
+// .small,
+// .is-style-small {
+// 	font-size: rem(14);
+// }
+
+// mark {
+// 	padding: 0;
+// }
+
+// .list-unstyled {
+// 	padding-left: 0;
+//   list-style: none;
+// }
+
+// a.external-link {
+// 	display: inline;
+
+// 	&::after {
+// 		content: "";
+// 		mask: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjEgMTN2MTBoLTIxdi0xOWgxMnYyaC0xMHYxNWgxN3YtOGgyem0zLTEyaC0xMC45ODhsNC4wMzUgNC02Ljk3NyA3LjA3IDIuODI4IDIuODI4IDYuOTc3LTcuMDcgNC4xMjUgNC4xNzJ2LTExeiIvPjwvc3ZnPg==");
+// 		mask-size: contain;
+// 		background: currentColor;
+// 		opacity: 0.8;
+// 		display: inline-block;
+// 		position: relative;
+// 		margin-left: 0.25em;
+// 		height: 0.75rem;
+// 		width: 0.75rem;
+// 	}
+
+// 	&.wp-block-button__link,
+// 	&.button {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 	}
+// }
+
+code {
+	font-family: "Courier New", Courier, monospace;
+	line-height: inherit;
+	padding-inline: .15em;
+	background-color: lighten($gray-100, 10%);
+}

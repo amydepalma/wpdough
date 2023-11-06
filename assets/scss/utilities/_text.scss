@@ -1,0 +1,34 @@
+// Text utility styles
+.text-underline {
+	text-decoration: underline;
+}
+
+.fw-bold {
+	font-weight: bold;
+}
+
+// Helpful wrapper when we want to modify output content from a WYSIWYG field, or <InnerBlocks/>
+.adjust-wysiwyg {
+
+  // Remove the margin bottom from the last child of this div; helpful when we want to remove the default margin-bottom of the <p> to better align our copy in the space
+  >*:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+// A11y
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  @include visually-hidden();
+}
+
+a#skip-to-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 10000;
+  background-color: $yellow-500;
+  // @extend .link-white;
+}
