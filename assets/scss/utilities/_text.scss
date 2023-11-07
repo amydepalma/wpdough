@@ -7,6 +7,12 @@
 	font-weight: bold;
 }
 
+.list-unstyled {
+	padding-left: 0;
+  list-style: none;
+}
+
+
 // Helpful wrapper when we want to modify output content from a WYSIWYG field, or <InnerBlocks/>
 .adjust-wysiwyg {
 

@@ -1,17 +1,26 @@
+/* ----------------
+BASE
+------------------------------*/
 :root, html, body {
   font-family: var(--ff-base);
 	font-weight: var(--fw-base);
 	font-size: var(--fs-base);
-	color: var(--text-base);
+  font-style: normal;
 	line-height: var(--lh-base);
+	color: var(--text-base);
 }
 
+/* ----------------
+HEADINGS
+------------------------------*/
 @each $name, $size in $fs-map {
-	.#{$name} {
+	#{$name} {
 		font-size: $size;
+		line-height: var(--lh-sm);
+		max-width: var(--textMaxWidth);
 	}
 
-	#{$name} {
+	.#{$name} {
 		font-size: $size;
 	}
 }
@@ -23,35 +32,42 @@
 	}
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-label {
-	max-width: var(--textMaxWidth);
+
+// Margin-top for headings after a typography block
+:where(address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
+  ~ :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: calc(var(--type-spacer) * 1.5);
+  }
 }
 
-// .lead,
-// .is-style-lead {
-// 	font-size: rem(20);
-// }
+/* ----------------
+OTHER TEXT ELEMENTS
+------------------------------*/
 
-// .small,
-// .is-style-small {
-// 	font-size: rem(14);
-// }
+// Paragraphs
+p {
+	max-width: var(--textMaxWidth);
+	margin-bottom: calc(var(--type-spacer) * 3);
+}
 
-// mark {
-// 	padding: 0;
-// }
+// Lists
+:where(dl, ol, ul) {
+  padding-right: 0;
+  padding-left: var(--layout-spacer);
+  padding-inline-start: var(--layout-spacer);
+  padding-inline-end: 0;
 
-// .list-unstyled {
-// 	padding-left: 0;
-//   list-style: none;
-// }
+  li {
+    margin-bottom: calc(var(--type-spacer) * 0.25);
+  }
+}
+
+:where(dl, ol, ul) {
+  :is(dl, ol, ul) {
+    margin-top: calc(var(--type-spacer) * 0.25);
+  }
+}
+
 
 // a.external-link {
 // 	display: inline;

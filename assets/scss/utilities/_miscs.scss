@@ -1,5 +1,5 @@
 .box-shadow {
-	box-shadow: $box-shadow;
+	box-shadow:var(--box-shadow);
 }
 
 .h-100 {
