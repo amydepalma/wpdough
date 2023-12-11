@@ -3,14 +3,6 @@
 	 * Default Blog & CPT Archive template
 	*/
 
-  // Update the archive's meta title
-  add_filter( 'rank_math/frontend/title', function( $title ) {
-		$post_type = get_post_type();
-		$new_title = get_archive_page_title();
-		$suffix = substr($title, (strrpos($title, ' |') ?: -1) +1);
-		return $new_title . ' ' . $suffix;
-	});
-
 	get_header();
 
   // Get information about the page query which we will leverage later for various conditions
@@ -18,25 +10,9 @@
 	$post_type = get_post_type();
   $page_title = get_archive_page_title();
 
-  // First we want to check for any non-default CPTs and update our settings as needed
-  // By default, the "news-item" CPT will not exist in our WPSK-built theme by default
-  // It's been added here for placeholder purposes for future building
-  if($post_type === 'news-item') {
-    // Set up the custom taxonomy for filtering (if applicable)
-		$cat_taxonomy = 'news-item-tax';
-    // Get the archive link based on the taxonomy name
-		$all_link = get_post_type_archive_link('news-item');
-    // Get the page intro from the CPT's ACF Archive Options page
-    // This option page will need to be set up
-		$page_intro = get_field('page_intro', 'news_items_settings');
-	} else {
-    // Set the default taxonomy
-		$cat_taxonomy = 'category';
-		$posts_page_id = get_option('page_for_posts');
-		$all_link = get_permalink($posts_page_id);
-    // We use the page's excerpt for the intro on the default Archive.
-	}
-
+	$cat_taxonomy = 'category';
+	$posts_page_id = get_option('page_for_posts');
+	$all_link = get_permalink($posts_page_id);
 	if(is_category() || is_tax()){
 		$page_intro = category_description();
 	}
@@ -105,7 +81,7 @@
 				<ul class="is-layout-flow is-flex-container columns-3 wp-block-post-template">
 					<?php while (have_posts()) : the_post(); ?>
 					<li class="wp-block-post">
-						<?php get_template_part('templates/parts/wp-block-post', null, ['post' => $post, 'button_text' => 'Read More', 'show_cats' => true]); ?>
+						<?php get_template_part('templates/wp-block/post', null, ['post' => $post, 'button_text' => 'Read More', 'show_cats' => true]); ?>
 					</li>
 					<?php endwhile; wp_reset_postdata(); ?>
 				</ul>
@@ -114,13 +90,13 @@
 			<?php if (is_paginated()) : ?>
 			<div class="row">
 				<div class="col-12 mt-3">
-					<?php get_template_part('templates/parts/wp-block-query-pagination'); ?>
+					<?php get_template_part('templates/wp-block/query-pagination'); ?>
 				</div>
 			</div>
 			<?php endif; ?>
 			<?php else: ?>
 			<div class="min-h-50vh">
-				<?php get_template_part('templates/content', 'none'); ?>
+				<?php get_template_part('templates/content/none'); ?>
 			</div>
 			<?php endif; ?>
 		</div>

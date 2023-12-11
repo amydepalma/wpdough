@@ -5,73 +5,14 @@
     "appearanceTools": true,
     "useRootPaddingAwareAlignments": true,
     "layout": {
-      "contentSize": "var(--maxWidth)",
-      "wideSize": "var(--maxWidth)"
+      "contentSize": "var(--content-max-width)",
+      "wideSize": " "
     },
     "border": {
       "color": false,
       "radius": false,
       "style": false,
       "width": false
-    },
-    "spacing": {
-      "spacingSizes": [
-        {
-          "size": "var(--spacing-0)",
-          "slug": "none",
-          "name": "None"
-        },
-        {
-          "size": "var(--spacing-xs)",
-          "slug": "xs",
-          "name": "Extra Small"
-        },
-        {
-          "size": "var(--spacing-sm)",
-          "slug": "sm",
-          "name": "Small"
-        },
-        {
-          "size": "var(--spacing)",
-          "slug": "",
-          "name": "Normal"
-        },
-        {
-          "size": "var(--spacing-md)",
-          "slug": "md",
-          "name": "Medium"
-        },
-        {
-          "size": "var(--spacing-lg)",
-          "slug": "lg",
-          "name": "Large"
-        },
-        {
-          "size": "var(--spacing-xl)",
-          "slug": "xl",
-          "name": "Extra Large"
-        }
-      ],
-      "blockGap": true,
-      "units": [
-        "%",
-        "ch",
-        "vh",
-        "vw",
-        "em",
-        "rem"
-      ]
-    },
-    "styles": {
-      "spacing": {
-        "blockGap": "0",
-        "padding": {
-          "top": "0",
-          "right": "0",
-          "bottom": "0",
-          "left": "0"
-        }
-      }
     },
     "typography": {
       "dropCap": false,

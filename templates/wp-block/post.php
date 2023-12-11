@@ -26,18 +26,18 @@ $cat_taxonomy = 'category';
 ?>
 
 <?php if (!empty($post)) : ?>
-  <article <?= $att_string ?>>
-    <figure class="wp-block-post-featured-image mb-0">
-      <a href="<?= get_permalink($post) ?>" target="_self">
-        <?php if (!empty(get_the_post_thumbnail($post))) : ?>
-          <?= get_the_post_thumbnail($post, 'large', ['class' => 'wp-post-image']) ?>
-        <?php else: ?>
-          <img src="<?= asset_path('images/post-fallback.png') ?>" alt="Featured Image for <?= $post->post_title ?>" class="wp-post-image">
-        <?php endif; ?>
-      </a>
-    </figure>
+<article <?= $att_string ?>>
+	<figure class="wp-block-post-featured-image mb-0">
+		<a href="<?= get_permalink($post) ?>" target="_self">
+			<?php if (!empty(get_the_post_thumbnail($post))) : ?>
+			<?= get_the_post_thumbnail($post, 'large', ['class' => 'wp-post-image']) ?>
+			<?php else: ?>
+			<img src="<?= asset_path('images/post-fallback.png') ?>" alt="Featured Image for <?= $post->post_title ?>" class="wp-post-image">
+			<?php endif; ?>
+		</a>
+	</figure>
 
-    <?php
+	<?php
       get_template_part("templates/parts/card-body", null, [
         'text_color' => $text_color,
         'show_button' => $show_button,
@@ -46,5 +46,5 @@ $cat_taxonomy = 'category';
         'cat_taxonomy' => $cat_taxonomy
       ]);
     ?>
-  </article>
+</article>
 <?php endif; ?>

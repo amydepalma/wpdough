@@ -1,12 +1,7 @@
 <?php get_header() ?>
-
-
+<div class="page-width box-shadow has-white-background-color">
 <h2>Wordpress Styling</h2>
-<?php if (have_posts()): ?>
-<?php while (have_posts()): the_post(); ?>
-<?php the_content(); ?>
-<?php endwhile; ?>
-<?php endif; ?>
+
 
 <h2>Base Styling</h2>
 <p class="notice">This demo page details a select set of elements that are meant to show off Simple.css’s styling, and provide HTML to help you get started easily. If you want a comprehensive demonstration of elements that may or may not be styled by Simple.css, please see <a href="https://test.simplecss.org">our test page</a>.</p>
@@ -33,6 +28,20 @@
 
 <h6 id="heading-6-096rem">Heading 6 <code>0.96rem</code></h6>
 
+
+<section class="full-width has-green-200-background-color">
+
+	<section class="breakout has-green-400-background-color">
+	breakout
+	<p>Links are formatted very simply on Simple.css (shock horror). They use the <code>accent</code> CSS variable and are underlined. There is a <code>:hover</code> effect that removes the underline.</p>
+
+<p>Buttons use the same <code>accent</code> CSS variable for their colour. When hovering, there is an opacity effect.</p>
+	</section>
+</section>
+
+
+<section class="breakout has-blue-400-background-color">
+
 <h3 id="links--buttons">Links &amp; Buttons</h3>
 
 <p>Links are formatted very simply on Simple.css (shock horror). They use the <code>accent</code> CSS variable and are underlined. There is a <code>:hover</code> effect that removes the underline.</p>
@@ -44,7 +53,8 @@
 <p><button>I’m a button</button></p>
 
 <p><a class="button" href="https://example.com">I’m a button with a link</a></p>
-
+</section>
+<section class="full-width has-blue-200-background-color">
 <h2 id="other-typography-elements">Other typography elements</h2>
 
 <p>There are a number of other typography elements that you can use with Simple.css. Some of the common ones are:</p>
@@ -55,6 +65,7 @@
 	<li>Adding <code>inline code</code> using the <code>code</code> element.</li>
 	<li>Displaying keyboard commands like <kbd>ALT+F4</kbd> using the <code>kbd</code> element.</li>
 </ul>
+</section>
 
 <h3 id="lists">Lists</h3>
 
@@ -244,5 +255,5 @@
 </form>
 
 
-
+</div>
 <?php get_footer() ?>

@@ -4,11 +4,9 @@
 @import "variables";
 @import "mixins";
 
-/* Dependencies  */
-
 /* Layout */
 @import "layout/sectioning";
-@import "layout/page-wrap";
+@import "layout/post-grid";
 
 /* Content */
 @import "content/typography";
@@ -18,14 +16,19 @@
 // @import "components/card";
 // @import "components/header";
 // @import "components/footer";
-// @import "components/wp-reset";
-// @import "components/wp-media-text";
-// @import "components/wp-post-terms";
-// @import "components/wp-post";
-// @import "components/wp-query-pagination";
+
+
+/* Wordpress Blocks */
+// @import "wp-block/media-text";
+// @import "wp-block/image";
+// @import "wp-block/post-terms";
+// @import "wp-block/post";
+// @import "wp-block/query-pagination";
 
 /* Utilities */
 @import "utilities/colors";
 @import "utilities/spacing";
 @import "utilities/text";
 @import "utilities/miscs";
+
+/* Plugins */

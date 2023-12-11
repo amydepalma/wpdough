@@ -27,4 +27,4 @@
 		</header>
 		<?php endif; ?>
 
-		<main class="page-wrap box-shadow has-white-background-color" id="content">
+		<main class="page-grid" id="page">

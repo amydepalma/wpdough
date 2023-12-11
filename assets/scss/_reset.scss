@@ -2,8 +2,8 @@
 
 ::before,
 ::after {
-  text-decoration: inherit;
-  vertical-align: inherit;
+	text-decoration: inherit;
+	vertical-align: inherit;
 }
 
 h1,
@@ -33,3 +33,72 @@ img {
 	display: block;
 	max-inline-size: 100%;
 }
+
+// Wordpress
+
+// .alignwide {
+//   margin-left: auto;
+//   margin-right: auto;
+//   max-width: var(--bs-4-wp-block-max);
+// }
+
+// /** Color classes */
+// @each $infix,
+// $color in $theme-colors {
+
+//   // Basic coloring
+//   .has-#{"" + $infix}-color {
+//     color: $color !important;
+
+//     a {
+//       @extend .link-#{"" + $infix};
+//     }
+//   }
+
+//   // Inline links
+//   a mark.has-inline-color.has-#{"" + $infix}-color {
+//     @extend .link-#{"" + $infix};
+//     text-decoration: underline;
+//   }
+
+//   a {
+
+//     &:hover,
+//     &:focus,
+//     &:focus-visible {
+//       mark.has-inline-color.has-#{"" + $infix}-color {
+//         color: contrast-color($color) !important;
+//       }
+//     }
+//   }
+
+//   // Background colors
+//   .has-#{"" + $infix}-background-color {
+//     background-color: $color !important;
+//   }
+// }
+
+// .has-white-color,
+// .has-light-color {
+//   @include font-smoothing(on);
+// }
+
+// /** Captions */
+// .wp-caption {
+//   // @extend .figure;
+// }
+
+// .wp-caption img {
+//   // @extend .figure-img;
+//   // @extend .img-fluid;
+// }
+
+// .wp-caption-text {
+//   // @extend .figure-caption;
+// }
+
+// /** Text meant only for screen readers */
+// .screen-reader-text {
+//   @extend .visually-hidden;
+//   @extend .visually-hidden-focusable;
+// }

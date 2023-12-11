@@ -24,6 +24,8 @@ if(!is_child_theme()){
 		require_once(get_template_directory() . $filepath);
 	}, ['utilities', 'blocks', 'post-types', 'taxonomies']);
 }
+
+
 /**
  * Define Constants
  */
@@ -74,6 +76,7 @@ add_action('after_setup_theme', function() {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', false);
 	}
+
 
 });
 

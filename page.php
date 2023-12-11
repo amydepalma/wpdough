@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<div class="has-global-padding is-layout-constrained">
+<div class="page-width box-shadow has-white-background-color">
   <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
       <?php the_content(); ?>
