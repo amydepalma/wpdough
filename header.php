@@ -27,4 +27,5 @@
 		</header>
 		<?php endif; ?>
 
-		<main class="page-grid" id="page">
+		<main id="page">
+			<div class="mw-alignwide box-shadow has-white-background-color">
