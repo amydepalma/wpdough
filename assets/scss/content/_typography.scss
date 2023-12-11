@@ -27,18 +27,26 @@ HEADINGS
 	}
 }
 
-
 @for $i from 1 through 3 {
 	.hd#{$i} {
 		font-size: var(--hd#{$i});
 	}
 }
 
-
 // Margin-top for headings after a typography block
-:where(address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
+:where(address,
+	blockquote,
+	dl,
+	figure,
+	form,
+	p,
+	pre,
+	table,
+	figure.wp-caption,
+	.wp-block-columns,
+	.wp-block-group) {
 	~ :is(h1, h2, h3, h4, h5, h6) {
-		margin-top: calc(var(--type-spacer) * 1.5);
+		margin-top: calc(var(--type-spacer) * 2);
 	}
 }
 
@@ -53,23 +61,23 @@ p {
 }
 
 // Lists
-:where(dl, ol, ul) {
+:where(dl, ol, ul):not(.wp-block-post-template) {
+	font-size: var(--p);
 	padding-right: 0;
-	padding-left: var(--layout-spacer);
-	padding-inline-start: var(--layout-spacer);
+	padding-left: var(--padding-inline);
+	padding-inline-start: var(--padding-inline);
 	padding-inline-end: 0;
+	padding-bottom: calc(var(--type-spacer) * 2);
 
 	li {
-		margin-bottom: calc(var(--type-spacer) * 0.25);
+		margin-bottom: calc(var(--spacer) * 0.65);
 	}
-}
 
-:where(dl, ol, ul) {
 	:is(dl, ol, ul) {
-		margin-top: calc(var(--type-spacer) * 0.25);
+		margin-top: calc(var(--spacer) * 0.65);
 	}
-}
 
+}
 
 // a.external-link {
 // 	display: inline;

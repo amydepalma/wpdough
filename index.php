@@ -27,7 +27,7 @@
 		<h1 class="mb-0"><?= $page_title ?></h1>
 
 		<?php if (!empty($page_intro)): ?>
-		<div class="adjust-wysiwyg mt-3 mb-0"><?= $page_intro ?></div>
+		<div class="mt-3 mb-0"><?= $page_intro ?></div>
 		<?php elseif(!empty($q_obj->post_excerpt)): ?>
 		<p class="mt-3 mb-0"><?= $q_obj->post_excerpt ?></p>
 		<?php endif; ?>

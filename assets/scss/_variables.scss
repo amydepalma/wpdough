@@ -4,7 +4,8 @@
 LAYOUT
 ------------------------------*/
 :root {
-	--padding-inline: 2rem;
+	--spacer: 1rem;
+	--padding-inline: calc((var(--spacer) * 2));
 	--content-max-width: 98.75rem; //1580px
 	--alignwide-max-width: 100rem; //1600px
 	--alignwide-size: calc((var(--alignwide-max-width) - var(--content-max-width)) / 2);
@@ -21,9 +22,9 @@ $fs-map: (
 	"h6": clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem),
 	"h5": clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem),
 	"h4": clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem),
-	"h3": clamp(1.758rem, 0.713vw + 1.58rem, 2.221rem),
-	"h2": clamp(2.197rem, 1.175vw + 1.904rem, 2.961rem),
-	"h1": clamp(2.747rem, 1.846vw + 2.285rem, 3.947rem),
+	"h3": clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem),
+	"h2": clamp(1.758rem, 0.713vw + 1.58rem, 2.221rem),
+	"h1": clamp(2.197rem, 1.175vw + 1.904rem, 2.961rem),
 );
 
 :root {

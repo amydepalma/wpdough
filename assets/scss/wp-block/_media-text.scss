@@ -4,7 +4,7 @@ body.editor-styles-wrapper .wp-block-media-text,
 
 	// Default
 	.wp-block-media-text__content {
-		@extend .adjust-wysiwyg;
+		@extend .mb-0;
 		padding-right: var(--container_min_padding) !important;
 		padding-left: var(--container_min_padding) !important;
 
