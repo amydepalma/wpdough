@@ -18,88 +18,74 @@
 	}
 ?>
 
-<div class="has-global-padding is-layout-constrained">
-	<section>
-		<aside class="my-6">
-			<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
-		</aside>
+<nav class="my-6">
+	<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+</nav>
 
-		<div class="row">
-			<div class="col-12 col-md-8">
-				<h1 class="mb-0"><?= $page_title ?></h1>
-			</div>
-		</div>
+<section class="post-grid">
+	<div>
+		<h1 class="mb-0"><?= $page_title ?></h1>
 
-		<div class="row">
-			<div class="col-12 col-md-7 col-lg-6">
-				<?php if (!empty($page_intro)): ?>
-				<div class="adjust-wysiwyg mt-3 mb-0"><?= $page_intro ?></div>
-				<?php elseif(!empty($q_obj->post_excerpt)): ?>
-				<p class="mt-3 mb-0"><?= $q_obj->post_excerpt ?></p>
-				<?php endif; ?>
-			</div>
-		</div>
+		<?php if (!empty($page_intro)): ?>
+		<div class="adjust-wysiwyg mt-3 mb-0"><?= $page_intro ?></div>
+		<?php elseif(!empty($q_obj->post_excerpt)): ?>
+		<p class="mt-3 mb-0"><?= $q_obj->post_excerpt ?></p>
+		<?php endif; ?>
 
 		<?php if(get_terms($cat_taxonomy)): ?>
-		<div class="row">
-			<div class="col-12">
-				<div class="d-flex flex-row align-items-center flex-wrap gap-2 mt-6">
-					<div class="flex-shrink-0">
-						<label for="cat_select" class="text-gray-300 small mb-0 me-2">Filter by</label>
-					</div>
-					<div>
-						<div class="d-inline-flex flex-row flex-wrap gap-2">
-							<a href="<?= esc_url($all_link); ?>" class="<?= !is_category() && !is_tax() ? 'fw-bold' : '' ?>">All</a>
+		<div class="d-flex flex-row align-items-center flex-wrap gap-2 mt-6">
+			<div class="flex-shrink-0">
+				<label for="cat_select" class="text-gray-300 small mb-0 me-2">Filter by</label>
+			</div>
+			<div>
+				<div class="d-inline-flex flex-row flex-wrap gap-2">
+					<a href="<?= esc_url($all_link); ?>" class="<?= !is_category() && !is_tax() ? 'fw-bold' : '' ?>">All</a>
 
-							<?php
-                  $cats = get_terms($cat_taxonomy);
-                  if(is_category() || is_tax()){
-                    $current = $q_obj->slug;
-                  }
+					<?php
+								$cats = get_terms($cat_taxonomy);
+								if(is_category() || is_tax()){
+									$current = $q_obj->slug;
+								}
 
-                  foreach($cats as $cat){
-                    $is_selected = '';
-										if (!empty($current) && $current === $cat->slug) {
-											$is_selected = ' fw-bold';
-										}
-                    echo '<a href="' . esc_attr( get_category_link( $cat->term_id ) ) . '" class="'.$is_selected.'">' . __( $cat->name ) . '</a>';
-                  }
-                ?>
-						</div>
-					</div>
+								foreach($cats as $cat){
+									$is_selected = '';
+									if (!empty($current) && $current === $cat->slug) {
+										$is_selected = ' fw-bold';
+									}
+									echo '<a href="' . esc_attr( get_category_link( $cat->term_id ) ) . '" class="'.$is_selected.'">' . __( $cat->name ) . '</a>';
+								}
+							?>
 				</div>
 			</div>
 		</div>
-
 		<?php endif; ?>
-	</section>
+	</div>
+</section>
 
-	<section class="mb-md mb-lg-lg">
-		<div class="has-global-padding is-layout-constrained wp-block-group" style="padding-top:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4)">
-			<?php if (have_posts()): ?>
-			<div class="is-layout-flow wp-block-query">
-				<ul class="is-layout-flow is-flex-container columns-3 wp-block-post-template">
-					<?php while (have_posts()) : the_post(); ?>
-					<li class="wp-block-post">
-						<?php get_template_part('templates/wp-block/post', null, ['post' => $post, 'button_text' => 'Read More', 'show_cats' => true]); ?>
-					</li>
-					<?php endwhile; wp_reset_postdata(); ?>
-				</ul>
-			</div>
 
-			<?php if (is_paginated()) : ?>
-			<div class="row">
-				<div class="col-12 mt-3">
-					<?php get_template_part('templates/wp-block/query-pagination'); ?>
-				</div>
-			</div>
-			<?php endif; ?>
-			<?php else: ?>
-			<div class="min-h-50vh">
-				<?php get_template_part('templates/content/none'); ?>
-			</div>
-			<?php endif; ?>
+<section class="mb-md mb-lg-lg">
+	<div class="post-grid has-global-padding is-layout-constrained wp-block-group" style="padding-top:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4)">
+
+		<?php if (have_posts()): ?>
+		<div class="is-layout-flow wp-block-query">
+			<ul class="is-layout-flow is-flex-container columns-3 wp-block-post-template">
+				<?php while (have_posts()) : the_post(); ?>
+				<li class="wp-block-post">
+					<?php get_template_part('templates/wp-block/post', null, ['post' => $post, 'button_text' => 'Read More', 'show_cats' => true]); ?>
+				</li>
+				<?php endwhile; wp_reset_postdata(); ?>
+			</ul>
 		</div>
-	</section>
-</div>
+
+		<?php if (is_paginated()) : ?>
+		<?php get_template_part('templates/wp-block/query-pagination'); ?>
+		<?php endif; ?>
+		<?php else: ?>
+		<div class="mh-50vh">
+			<?php get_template_part('templates/content/none'); ?>
+		</div>
+		<?php endif; ?>
+	</div>
+</section>
+
 <?php get_footer(); ?>

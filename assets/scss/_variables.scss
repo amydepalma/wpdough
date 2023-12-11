@@ -4,9 +4,9 @@
 LAYOUT
 ------------------------------*/
 :root {
-	--padding-inline: 1.5rem;
-	--content-max-width: 86.25rem;
-	--alignwide-max-width: 90rem;
+	--padding-inline: 2rem;
+	--content-max-width: 98.75rem; //1580px
+	--alignwide-max-width: 100rem; //1600px
 	--alignwide-size: calc((var(--alignwide-max-width) - var(--content-max-width)) / 2);
 }
 
@@ -137,14 +137,13 @@ $theme-colors: (
 // /* ----------------
 // BREAKPOINTS
 // ------------------------------*/
-// $breakpoints: (
-// 	"xs": 480px,
-// 	"sm": 576px,
-// 	"md": 768px,
-// 	"lg": 990px,
-// 	"xl": 1440px,
-// 	"xxl": 1920px
-// );
+$breakpoints: (
+	"xs": 480px,
+	"sm": 576px,
+	"md": 768px,
+	"lg": 1140px,
+	"xl": 1440px,
+);
 
 
 // xs: Extra small (portrait phones)

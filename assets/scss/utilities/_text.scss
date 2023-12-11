@@ -1,15 +1,19 @@
 // Text utility styles
 .text-underline {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .fw-bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .list-unstyled {
-	padding-left: 0;
+  padding-left: 0;
   list-style: none;
+}
+
+.text-start {
+  text-align: left !important;
 }
 
 
@@ -37,4 +41,42 @@ a#skip-to-content {
   z-index: 10000;
   background-color: $yellow-500;
   // @extend .link-white;
+}
+
+
+/* ----------------
+WORDPRESS ACCOMMODATIONS
+------------------------------*/
+
+.post-grid {
+
+  // Margin-top for headings after a typography block
+  :where(address, blockquote, dl, figure, form, ol, p, pre, table, ul, figure.wp-caption, .wp-block-columns, .wp-block-group)~ :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: calc(var(--type-spacer) * 2);
+  }
+
+  // Paragraphs
+  p {
+    // max-width: var(--textMaxWidth);
+    margin-bottom: calc(var(--type-spacer) * 3);
+  }
+
+  // Lists
+  :where(dl, ol, ul) {
+    &:not(.wp-block-post-template) {
+      padding-right: 0;
+      padding-left: var(--padding-inline);
+      padding-inline-start: var(--padding-inline);
+      padding-inline-end: 0;
+    }
+
+    li {
+      margin-bottom: calc(var(--type-spacer) * 0.25);
+    }
+
+    :is(dl, ol, ul) {
+      margin-top: calc(var(--type-spacer) * 0.25);
+    }
+  }
+
 }
