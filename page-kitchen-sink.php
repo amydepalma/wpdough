@@ -29,18 +29,15 @@
 	<h6 id="heading-6-096rem">Heading 6 <code>0.96rem</code></h6>
 
 
-	<section class="full-width has-green-200-background-color">
+	<section class="alignfull has-green-200-background-color">
+		<h2>Alignfull</h2>
+		<p>Links are formatted very simply on Simple.css (shock horror). They use the <code>accent</code> CSS variable and are underlined. There is a <code>:hover</code> effect that removes the underline.</p>
 
-		<section class="breakout has-green-400-background-color">
-			breakout
-			<p>Links are formatted very simply on Simple.css (shock horror). They use the <code>accent</code> CSS variable and are underlined. There is a <code>:hover</code> effect that removes the underline.</p>
-
-			<p>Buttons use the same <code>accent</code> CSS variable for their colour. When hovering, there is an opacity effect.</p>
-		</section>
+		<p>Buttons use the same <code>accent</code> CSS variable for their colour. When hovering, there is an opacity effect.</p>
 	</section>
 
 
-	<section class="breakout has-blue-400-background-color">
+	<section class="alignwide has-blue-400-background-color">
 
 		<h3 id="links--buttons">Links &amp; Buttons</h3>
 
@@ -54,7 +51,7 @@
 
 		<p><a class="button" href="https://example.com">I’m a button with a link</a></p>
 	</section>
-	<section class="full-width has-blue-200-background-color">
+	<section class="alignfull has-blue-200-background-color">
 		<h2 id="other-typography-elements">Other typography elements</h2>
 
 		<p>There are a number of other typography elements that you can use with Simple.css. Some of the common ones are:</p>

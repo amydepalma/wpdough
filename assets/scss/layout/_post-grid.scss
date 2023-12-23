@@ -1,8 +1,12 @@
 .post-grid {
   display: grid;
-  grid-template-columns:
-    [alignfull-start] minmax(0, 1fr) [alignwide-start] minmax(0, var(--alignwide-size)) [content-start] min(100% - (var(--padding-inline) * 2),
+  grid-template-columns: [alignfull-start] minmax(0, 1fr) [alignwide-start] minmax(0, var(--alignwide-size)) [content-start] min(100% - var(--padding-inline),
       var(--content-max-width)) [content-end] minmax(0, var(--alignwide-size)) [alignwide-end] minmax(0, 1fr) [alignfull-end];
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: [alignfull-start] minmax(0, 1fr) [alignwide-start] minmax(0, var(--alignwide-size)) [content-start] min(100% - (var(--padding-inline) * 2),
+        var(--content-max-width)) [content-end] minmax(0, var(--alignwide-size)) [alignwide-end] minmax(0, 1fr) [alignfull-end];
+  }
 }
 
 .post-grid> :not(.alignwide, .alignfull),

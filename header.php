@@ -28,4 +28,3 @@
 		<?php endif; ?>
 
 		<main id="page">
-			<div class="mw-alignwide box-shadow has-white-background-color">
