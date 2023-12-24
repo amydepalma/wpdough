@@ -36,7 +36,7 @@ define('WPDOUGH_VERSION', '1.0.0');
  */
 add_action('after_setup_theme', function() {
 
-	// add_post_type_support('page', 'excerpt');
+	add_post_type_support('page', 'excerpt');
 
   /**
    * Enable plugins to manage the document title
