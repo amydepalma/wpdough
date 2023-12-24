@@ -6,8 +6,8 @@ LAYOUT
 :root {
 	--spacer: 1rem;
 	--padding-inline: calc((var(--spacer) * 2));
-	--content-max-width: 98.75rem; //1580px
-	--alignwide-max-width: 100rem; //1600px
+	--content-max-width: 86.25rem; //1380
+	--alignwide-max-width: 98.75rem; //1580px
 	--alignwide-size: calc((var(--alignwide-max-width) - var(--content-max-width)) / 2);
 }
 

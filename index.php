@@ -25,23 +25,29 @@
 <section class="post-grid">
 	<div>
 		<h1 class="mb-0"><?= $page_title ?></h1>
-
 		<?php if (!empty($page_intro)): ?>
 		<div class="mt-3 mb-0"><?= $page_intro ?></div>
 		<?php elseif(!empty($q_obj->post_excerpt)): ?>
 		<p class="mt-3 mb-0"><?= $q_obj->post_excerpt ?></p>
 		<?php endif; ?>
+	</div>
 
-		<?php if(get_terms($cat_taxonomy)): ?>
-		<div class="d-flex flex-row align-items-center flex-wrap gap-2 mt-6">
-			<div class="flex-shrink-0">
-				<label for="cat_select" class="text-gray-300 small mb-0 me-2">Filter by</label>
-			</div>
-			<div>
-				<div class="d-inline-flex flex-row flex-wrap gap-2">
-					<a href="<?= esc_url($all_link); ?>" class="<?= !is_category() && !is_tax() ? 'fw-bold' : '' ?>">All</a>
+	<div class="alignfull has-green-200-background-color">
+		<div class="alignwide">
+			<h2>Featured Post</h2>
+		</div>
+	</div>
 
-					<?php
+	<?php if(get_terms($cat_taxonomy)): ?>
+	<div class="d-flex flex-row align-items-center flex-wrap gap-2 mt-6">
+		<div class="flex-shrink-0">
+			<label for="cat_select" class="text-gray-300 small mb-0 me-2">Filter by</label>
+		</div>
+		<div>
+			<div class="d-inline-flex flex-row flex-wrap gap-2">
+				<a href="<?= esc_url($all_link); ?>" class="<?= !is_category() && !is_tax() ? 'fw-bold' : '' ?>">All</a>
+
+				<?php
 								$cats = get_terms($cat_taxonomy);
 								if(is_category() || is_tax()){
 									$current = $q_obj->slug;
@@ -55,12 +61,12 @@
 									echo '<a href="' . esc_attr( get_category_link( $cat->term_id ) ) . '" class="'.$is_selected.'">' . __( $cat->name ) . '</a>';
 								}
 							?>
-				</div>
 			</div>
 		</div>
-		<?php endif; ?>
 	</div>
+	<?php endif; ?>
 </section>
+
 
 
 <section class="mb-md mb-lg-lg">
