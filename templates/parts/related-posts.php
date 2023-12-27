@@ -8,8 +8,8 @@
 ?>
 
 <?php if (!empty($related_posts)): ?>
-<section class="is-layout-flow wp-block-group alignfull bg-gray-200 py-4">
-	<div class="post-grid has-global-padding is-layout-constrained wp-block-group">
+<section class="is-layout-flow wp-block-group alignfull py-4">
+	<div class="page-grid has-global-padding is-layout-constrained wp-block-group">
 		<div class="alignfull has-gray-200-background-color">
 			<h2><?= $section_title ?></h2>
 			<div class="is-layout-flow wp-block-query">

@@ -1,9 +1,17 @@
-// .alignwide {
-// }
+.mw-sm {
+	max-width: var(--mw-sm);
+}
 
-.mw-alignwide {
-	max-width: var(--alignwide-max-width);
-	margin: 0 auto;
+.mw-md {
+	max-width: var(--mw-md);
+}
+
+.mw-lg {
+	max-width: var(--mw-lg);
+}
+
+.mw-xl {
+	max-width: var(--mw-xl);
 }
 
 .mh-50vh {

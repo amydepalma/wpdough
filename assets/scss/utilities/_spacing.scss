@@ -1,7 +1,19 @@
+.page-padding {
+	padding-inline: calc(var(--padding-inline) * .5);
+
+	@include media-breakpoint-up(sm) {
+		padding-inline: var(--padding-inline);
+	}
+}
+
 .mb-0 {
 	margin-bottom: 0 !important;
 
 	>:last-child {
 		margin-bottom: 0 !important;
 	}
+}
+
+.m-auto {
+	margin: 0 auto !important;
 }

@@ -1,4 +1,4 @@
-.post-grid {
+.page-grid {
   display: grid;
   grid-template-columns: [alignfull-start] minmax(0, 1fr) [alignwide-start] minmax(0, var(--alignwide-size)) [content-start] min(100% - var(--padding-inline),
       var(--content-max-width)) [content-end] minmax(0, var(--alignwide-size)) [alignwide-end] minmax(0, 1fr) [alignfull-end];
@@ -9,24 +9,24 @@
   }
 }
 
-.post-grid> :not(.alignwide, .alignfull),
+.page-grid> :not(.alignwide, .alignfull),
 .alignfull> :not(.alignwide, .alignfull) {
   grid-column: content;
 }
 
-.post-grid>.alignfull {
+.page-grid>.alignfull {
   grid-column: alignfull;
   display: grid;
   grid-template-columns: inherit;
 }
 
-.post-grid>.alignwide,
+.page-grid>.alignwide,
 .alignfull>.alignwide {
   grid-column: alignwide;
 }
 
 /* Fix alignment when nesting groups so we can still organize the editor and have alignside for children. */
-.post-grid>.wp-block-group .wp-block-group.alignwide {
+.page-grid>.wp-block-group .wp-block-group.alignwide {
   margin-left: calc(var(--alignwide-size) * -1) !important;
   margin-right: calc(var(--alignwide-size) * -1) !important;
   width: calc(100% + (var(--alignwide-size) * 2));

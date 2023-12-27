@@ -1,3 +1,4 @@
+Category tag
 <?php if(get_categories()) :
 	$args_defaults = array(
 		'taxonomy' => null,

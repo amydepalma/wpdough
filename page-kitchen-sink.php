@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<div class="post-grid">
+<div class="page-grid">
 	<h2>Wordpress Styling</h2>
 
 

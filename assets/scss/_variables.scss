@@ -6,9 +6,17 @@ LAYOUT
 :root {
 	--spacer: 1rem;
 	--padding-inline: calc((var(--spacer) * 2));
-	--content-max-width: 86.25rem; //1380
-	--alignwide-max-width: 98.75rem; //1580px
+	--content-max-width: 64rem; //1024px
+	--alignwide-max-width: 80rem; //1280px
 	--alignwide-size: calc((var(--alignwide-max-width) - var(--content-max-width)) / 2);
+}
+
+// Max-widths
+:root {
+	--mw-sm: var(--content-max-width); //1024
+	--mw-md: var(--alignwide-max-width); //1280
+	--mw-lg: 96rem; //1536px
+	--mw-xl: 112em; //1792px
 }
 
 // Breakpoints
@@ -59,20 +67,20 @@ $fs-map: (
 );
 
 :root {
-	--fs-base: 16px;
+	--fs-base: 18px;
 
-	--ff-base: Arial, sans-serif;
+	--ff-base: 'Montserrat', Arial, sans-serif;
 	--ff-headings: var(--ff-base);
 
 	--lh-base: 1.4;
-	--lh-sm: 1.55;
+	--lh-sm: 1.625;
 	--lh-lg: 1.6;
 
-	--fw-thin: 300;
-	--fw-regular: 400;
-	--fw-bold: 500;
+	--fw-regular: 300;
+	--fw-semibold: 500;
+	--fw-bold: 700;
 	--fw-base: var(--fw-regular);
-	--fw-headings: var(--fw-bold);
+	--fw-headings: var(--fw-semibold);
 
 	--type-spacer: .25em;
 	--type-max-width: 85ch;

@@ -22,7 +22,7 @@
 	<?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
 </nav>
 
-<section class="post-grid">
+<section class="page-grid">
 	<div>
 		<h1 class="mb-0"><?= $page_title ?></h1>
 		<?php if (!empty($page_intro)): ?>
@@ -70,7 +70,7 @@
 
 
 <section class="mb-md mb-lg-lg">
-	<div class="post-grid has-global-padding is-layout-constrained wp-block-group" style="padding-top:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4)">
+	<div class="page-grid has-global-padding is-layout-constrained wp-block-group" style="padding-top:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4)">
 
 		<?php if (have_posts()): ?>
 		<div class="is-layout-flow wp-block-query">
