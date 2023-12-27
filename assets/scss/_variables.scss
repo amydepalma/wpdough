@@ -16,16 +16,16 @@ LAYOUT
 	--mw-sm: var(--content-max-width); //1024
 	--mw-md: var(--alignwide-max-width); //1280
 	--mw-lg: 96rem; //1536px
-	--mw-xl: 112em; //1792px
+	--mw-xl: 112rem; //1792px
 }
 
 // Breakpoints
 $breakpoints: (
-	"xs": 480px,
-	"sm": 576px,
-	"md": 768px,
-	"lg": 1140px,
-	"xl": 1440px,
+	"xs": 512px,
+	"sm": 1024px,
+	"md": 1280px,
+	"lg": 1536px,
+	"xl": 1792px,
 );
 
 
@@ -56,18 +56,18 @@ TYPOGRAPHY
 $rem: 16px;
 $fs-base: 1rem;
 $fs-map: (
-	"p": clamp(1rem, 0.192vw + 0.952rem, 1.125rem),
+	"p": 18px,
 	"small": clamp(0.875rem, 0.8418rem + 0.1064vw, 0.9375rem),
 	"h6": clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem),
 	"h5": clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem),
 	"h4": clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem),
 	"h3": clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem),
 	"h2": clamp(1.758rem, 0.713vw + 1.58rem, 2.221rem),
-	"h1": clamp(2.197rem, 1.175vw + 1.904rem, 2.961rem),
+	"h1": 48px,
 );
 
 :root {
-	--fs-base: 18px;
+	--fs-base: 16px;
 
 	--ff-base: 'Montserrat', Arial, sans-serif;
 	--ff-headings: var(--ff-base);
@@ -78,7 +78,7 @@ $fs-map: (
 
 	--fw-regular: 300;
 	--fw-semibold: 500;
-	--fw-bold: 700;
+	--fw-bold: 600;
 	--fw-base: var(--fw-regular);
 	--fw-headings: var(--fw-semibold);
 
@@ -179,6 +179,7 @@ MISCS
 ------------------------------*/
 :root {
 	--box-shadow: 0 0 9px 0px #d1d1d1;
+	--img-border-radius: calc(var(--spacer) * .5);
 }
 
 

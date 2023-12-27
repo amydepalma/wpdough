@@ -16,14 +16,18 @@ body {
 HEADINGS
 ------------------------------*/
 @each $name, $size in $fs-map {
-	#{$name} {
-		font-size: $size;
-		line-height: var(--lh-sm);
-		// max-width: var(--type-max-width);
-	}
 
+	#{$name},
 	.#{$name} {
 		font-size: $size;
+	}
+}
+
+@for $i from 1 through 6 {
+
+	h#{$i},
+	.h#{$i} {
+		font-weight: var(--fw-headings);
 	}
 }
 
