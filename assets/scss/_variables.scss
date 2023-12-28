@@ -70,8 +70,10 @@ TYPOGRAPHY
 
 	--fs-base: 16px;
 	--fs-sm: clamp(0.875rem, 0.8418rem + 0.1064vw, 0.9375rem);
-	--fs-md: 20px;
-	--fs-lg: 24px;
+	--fs-md: 18px;
+	--fs-lg: 20px;
+	--fs-xl: 24px;
+
 	--h6: clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem);
 	--h5: clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem);
 	--h4: clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem);

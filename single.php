@@ -29,7 +29,7 @@ get_header();
 
 				<div class="mw-sm">
 					<h1 class="mb-3"><?php the_title(); ?></h1>
-					<p class="text-lg mb-4"><?= wp_strip_all_tags( get_the_excerpt() , true ); ?></p>
+					<p class="text-xl mb-4"><?= wp_strip_all_tags( get_the_excerpt() , true ); ?></p>
 
 					<?php if (has_post_thumbnail()): ?>
 						<figure class="mb-0">
@@ -67,7 +67,7 @@ get_header();
 			<?php endif; ?>
 
 			<div class="article-grid__sidebar">
-				<p class="text-lg"><time datetime="<?= get_the_date('c'); ?>"><?= esc_html(get_the_date('F d, Y')); ?></time></p>
+				<p class="fw-bold text-sm text-uppercase"><time datetime="<?= get_the_date('c'); ?>"><?= esc_html(get_the_date('M. d Y')); ?></time> &bull; [5 min read]</p>
 					<?php if (!empty(get_the_terms($post->ID, 'tag'))): ?>
 					<div class="mb-4">
 						<?php get_template_part('templates/wp-block/post-terms', null, ['taxonomy' => 'post_tag', 'post' => $post]); ?>

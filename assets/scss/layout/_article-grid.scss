@@ -30,6 +30,7 @@
 
     @include media-breakpoint-up(lg) {
       transform: translateY(-40%);
+      z-index: 2;
     }
   }
 }

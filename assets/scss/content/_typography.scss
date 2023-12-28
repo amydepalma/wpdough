@@ -66,6 +66,12 @@ p {
 	margin-bottom: calc(var(--type-spacer) * 3);
 }
 
+.text-xl {
+	font-size: var(--fs-xl);
+	font-weight: var(--fw-regular);
+	line-height: 1.6;
+}
+
 .text-lg {
 	font-size: var(--fs-lg);
 	font-weight: var(--fw-regular);
