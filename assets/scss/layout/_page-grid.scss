@@ -25,7 +25,7 @@
   grid-column: alignwide;
 }
 
-/* Fix alignment when nesting groups so we can still organize the editor and have alignside for children. */
+// Fix alignment when nesting groups so we can still organize the editor and have alignside for children.
 .page-grid>.wp-block-group .wp-block-group.alignwide {
   margin-left: calc(var(--alignwide-size) * -1) !important;
   margin-right: calc(var(--alignwide-size) * -1) !important;

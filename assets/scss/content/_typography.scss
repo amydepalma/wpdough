@@ -15,19 +15,21 @@ body {
 /* ----------------
 HEADINGS
 ------------------------------*/
-@each $name, $size in $fs-map {
+// @each $name, $size in $fs-map {
 
-	#{$name},
-	.#{$name} {
-		font-size: $size;
-	}
-}
+// 	#{$name},
+// 	.#{$name} {
+// 		font-size: $size;
+// 	}
+// }
 
 @for $i from 1 through 6 {
 
 	h#{$i},
 	.h#{$i} {
+		font-size: var(--h#{$i});
 		font-weight: var(--fw-headings);
+		line-height: var(--lh-headings);
 	}
 }
 
@@ -58,10 +60,20 @@ HEADINGS
 OTHER TEXT ELEMENTS
 ------------------------------*/
 
-// Paragraphs
+// Text
 p {
-	// max-width: var(--type-max-width);
+	font-size: var(--fs-md);
 	margin-bottom: calc(var(--type-spacer) * 3);
+}
+
+.text-lg {
+	font-size: var(--fs-lg);
+	font-weight: var(--fw-regular);
+	line-height: 1.6;
+}
+
+.text-sm {
+	font-size: var(--fs-sm);
 }
 
 // Lists

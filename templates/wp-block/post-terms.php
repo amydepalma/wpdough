@@ -1,8 +1,7 @@
-Category tag
 <?php if(get_categories()) :
 	$args_defaults = array(
 		'taxonomy' => null,
-		'post' => null,
+		'post' => $post,
 	);
 	$args = wp_parse_args($args, $args_defaults);
 ?>
@@ -14,8 +13,11 @@ Category tag
 
 				if (!empty($post_categories)) {
 					$output = '<div class="wp-block-post-terms">';
+					if($cat_tax === 'post_tag') {
+						$output .= '<span class="d-inline-flex">Topics:</span>';
+					}
 					foreach ($post_categories as $category) {
-						$output .= '<a href="' . esc_attr( get_category_link( $category->term_id ) ) . '" rel="tag">' . __( $category->name ) . '</a>';
+						$output .= '<a href="' . esc_attr( get_category_link( $category->term_id ) ) . '" rel="tag" class="badge badge--' . $cat_tax . '">' . __( $category->name ) . '</a>';
 					}
 					$output .= '</div>';
 				}
@@ -28,5 +30,5 @@ Category tag
 			}
 		}
 	?>
-<?= output_categories($args['taxonomy'], $post); ?>
+<?= output_categories($args['taxonomy'], $args['post']); ?>
 <?php endif; ?>

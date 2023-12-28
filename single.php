@@ -20,19 +20,24 @@ get_header();
 <div class="page-padding">
 	<article class="mw-lg m-auto">
 		<div class="article-grid">
-			<div class="article-grid__title">
-				<div class="mw-md">
-					<?php if (!empty(get_the_terms($post->ID, 'category'))): ?>
-					<div class="mb-4">
-						<?php get_template_part('templates/wp-block/post-terms', null, ['post' => $post]); ?>
-					</div>
-					<?php endif; ?>
-
-					<div class="mw-sm">
-						<h1><?php the_title(); ?></h1>
-						<p class="text-lg">Lead (excerpt)</p>
-					</div>
+			<div class="article-grid__title pt-6">
+				<?php if (!empty(get_the_terms($post->ID, 'category'))): ?>
+				<div class="mb-4">
+					<?php get_template_part('templates/wp-block/post-terms', null, ['taxonomy' => 'category', 'post' => $post]); ?>
 				</div>
+				<?php endif; ?>
+
+				<div class="mw-sm">
+					<h1 class="mb-3"><?php the_title(); ?></h1>
+					<p class="text-lg mb-4"><?= wp_strip_all_tags( get_the_excerpt() , true ); ?></p>
+
+					<?php if (has_post_thumbnail()): ?>
+						<figure class="mb-0">
+							<?php the_post_thumbnail('full', ['style' => 'object-fit: cover; max-height: 32rem; border-radius: var(--img-border-radius']); ?>
+						</figure>
+					<?php endif; ?>
+				</div>
+
 			</div>
 			<?php if (have_posts()):
 				$related_posts = get_posts(array(
@@ -47,13 +52,6 @@ get_header();
 				<?php while (have_posts()):
 					the_post();
 				?>
-					<?php if (has_post_thumbnail()): ?>
-						<div class="article-grid__image">
-							<figure class="mw-sm">
-								<?php the_post_thumbnail('full', ['style' => 'object-fit: contain;']); ?>
-							</figure>
-						</div>
-					<?php endif; ?>
 					<div class="article-grid__content">
 						<div class="mw-sm">
 							<?php the_content(); ?>
@@ -69,10 +67,10 @@ get_header();
 			<?php endif; ?>
 
 			<div class="article-grid__sidebar">
-				<p><small><em>Published: <time datetime="<?= get_the_date('c'); ?>"><?= esc_html(get_the_date('F d, Y')); ?></time></em></small></p>
-					<?php if (!empty(get_the_terms($post->ID, 'category'))): ?>
+				<p class="text-lg"><time datetime="<?= get_the_date('c'); ?>"><?= esc_html(get_the_date('F d, Y')); ?></time></p>
+					<?php if (!empty(get_the_terms($post->ID, 'tag'))): ?>
 					<div class="mb-4">
-						<?php get_template_part('templates/wp-block/post-terms', null, ['post' => $post]); ?>
+						<?php get_template_part('templates/wp-block/post-terms', null, ['taxonomy' => 'post_tag', 'post' => $post]); ?>
 					</div>
 					<?php endif; ?>
 

@@ -4,6 +4,7 @@
 LAYOUT
 ------------------------------*/
 :root {
+	--spacing-base: 8px;
 	--spacer: 1rem;
 	--padding-inline: calc((var(--spacer) * 2));
 	--content-max-width: 64rem; //1024px
@@ -53,60 +54,57 @@ $breakpoints: (
 /* ----------------
 TYPOGRAPHY
 ------------------------------*/
-$rem: 16px;
-$fs-base: 1rem;
-$fs-map: (
-	"p": 18px,
-	"small": clamp(0.875rem, 0.8418rem + 0.1064vw, 0.9375rem),
-	"h6": clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem),
-	"h5": clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem),
-	"h4": clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem),
-	"h3": clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem),
-	"h2": clamp(1.758rem, 0.713vw + 1.58rem, 2.221rem),
-	"h1": 48px,
-);
+// $rem: 16px;
+// $fs-base: 1rem;
 
 :root {
-	--fs-base: 16px;
-
 	--ff-base: 'Montserrat', Arial, sans-serif;
 	--ff-headings: var(--ff-base);
 
-	--lh-base: 1.4;
-	--lh-sm: 1.625;
-	--lh-lg: 1.6;
-
-	--fw-regular: 300;
+	--fw-light: 300;
+	--fw-regular: 400;
 	--fw-semibold: 500;
 	--fw-bold: 600;
 	--fw-base: var(--fw-regular);
 	--fw-headings: var(--fw-semibold);
 
-	--type-spacer: .25em;
-	--type-max-width: 85ch;
-
-	@each $name, $font-size in $fs-map {
-		--#{$name}: #{$font-size};
-	}
+	--fs-base: 16px;
+	--fs-sm: clamp(0.875rem, 0.8418rem + 0.1064vw, 0.9375rem);
+	--fs-md: 20px;
+	--fs-lg: 24px;
+	--h6: clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem);
+	--h5: clamp(1.125rem, 0.192vw + 1.077rem, 1.25rem);
+	--h4: clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem);
+	--h3: clamp(1.406rem, 0.4vw + 1.306rem, 1.666rem);
+	--h2: clamp(1.758rem, 0.713vw + 1.58rem, 2.221rem);
+	--h1: 48px;
 
 	--hd1: clamp(3.433rem, 2.812vw + 2.73rem, 5.261rem);
 	--hd2: clamp(4.292rem, 4.187vw + 3.245rem, 7.013rem);
 	--hd3: clamp(5.364rem, 6.129vw + 3.832rem, 9.348rem);
+
+	--lh-base: 1.75;
+	--lh-headings: 1.4;
+
+	--type-spacer: .25em;
 }
 
 /* ----------------
 COLORS
 // ------------------------------*/
-$yellow-500: #FFC906;
+$blue-100: #EFF5FF;
+$blue-200: #6583BF;
+$blue-300: #3A5CAC;
+$blue-400: #37559C;
+
+$yellow-100: #FFFBF0;
+$yellow-300: #FFC000;
+$yellow-500: #DBA603;
+
 $yellow-400: #FFD633;
-$yellow-300: #FFE066;
 $yellow-200: #FFEB99;
-$yellow-100: #FFF5CC;
 $blue-500: #2063B3;
-$blue-400: #4D82C2;
-$blue-300: #79A1D1;
-$blue-200: #A6C1E1;
-$blue-100: #D2E0F0;
+
 $light-blue-500: #5DA7FF;
 $light-blue-400: #7DB9FF;
 $light-blue-300: #9ECAFF;
