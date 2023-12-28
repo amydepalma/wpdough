@@ -5,7 +5,8 @@
   grid-template-rows: auto;
   grid-template-areas:
     "title"
-    "sidebar"
+    "sidetop"
+    "sidebottom"
     "content";
 
   @include media-breakpoint-up(sm) {
@@ -14,7 +15,8 @@
     grid-template-rows: auto auto;
     grid-template-areas:
       "title title"
-      "content sidebar";
+      "content sidetop"
+      "content sidebottom";
   }
 
   &__title {
@@ -25,13 +27,18 @@
     grid-area: content;
   }
 
-  &__sidebar {
-    grid-area: sidebar;
+  &__sidetop {
+    grid-area: sidetop;
+    align-self: self-start;
 
     @include media-breakpoint-up(lg) {
       transform: translateY(-40%);
       z-index: 2;
     }
+  }
+
+  &__sidebottom {
+    grid-area: sidebottom;
   }
 }
 

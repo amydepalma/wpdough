@@ -55,6 +55,11 @@ get_header();
 					<div class="article-grid__content">
 						<div class="mw-sm">
 							<?php the_content(); ?>
+							<?php the_content(); ?>
+							<?php the_content(); ?>
+							<?php the_content(); ?>
+							<?php the_content(); ?>
+							<?php the_content(); ?>
 						</div>
 					</div>
 				<?php endwhile; ?>
@@ -66,7 +71,7 @@ get_header();
 				</div>
 			<?php endif; ?>
 
-			<div class="article-grid__sidebar">
+			<div class="article-grid__sidetop">
 				<p class="fw-bold text-sm text-uppercase"><time datetime="<?= get_the_date('c'); ?>"><?= esc_html(get_the_date('M. d Y')); ?></time> &bull; [5 min read]</p>
 					<?php if (!empty(get_the_terms($post->ID, 'tag'))): ?>
 					<div class="mb-4">
@@ -75,6 +80,9 @@ get_header();
 					<?php endif; ?>
 
 					If author
+			</div>
+			<div class="article-grid__sidebottom">
+				Sidebottom
 			</div>
 		</div>
 	</article>
