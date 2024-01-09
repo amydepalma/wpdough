@@ -31,7 +31,6 @@
 
 .page-padding {
 	padding-inline: calc(var(--padding-inline) * .5);
-	overflow-x: hidden;
 
 	@include media-breakpoint-up(sm) {
 		padding-inline: var(--padding-inline);

@@ -9,11 +9,11 @@ get_header();
 ?>
 
 <?php if (function_exists('rank_math_the_breadcrumbs')): ?>
-	<nav class="has-blue-200-background-color">
-		<div class="page-padding">
-			<?php rank_math_the_breadcrumbs(); ?>
-		</div>
-	</nav>
+<nav class="has-blue-200-background-color">
+	<div class="page-padding">
+		<?php rank_math_the_breadcrumbs(); ?>
+	</div>
+</nav>
 <?php endif; ?>
 
 
@@ -29,13 +29,7 @@ get_header();
 
 				<div class="mw-sm">
 					<h1 class="mb-3"><?php the_title(); ?></h1>
-					<p class="text-xl mb-4"><?= wp_strip_all_tags( get_the_excerpt() , true ); ?></p>
-
-					<?php if (has_post_thumbnail()): ?>
-						<figure class="mb-0">
-							<?php the_post_thumbnail('full', ['style' => 'object-fit: cover; max-height: 32rem; border-radius: var(--img-border-radius']); ?>
-						</figure>
-					<?php endif; ?>
+					<p class="text-xl mb-0"><?= wp_strip_all_tags( get_the_excerpt() , true ); ?></p>
 				</div>
 
 			</div>
@@ -49,40 +43,53 @@ get_header();
 					'exclude' => get_the_ID(),
 				));
 				?>
-				<?php while (have_posts()):
+			<?php while (have_posts()):
 					the_post();
 				?>
-					<div class="article-grid__content">
-						<div class="mw-sm">
-							<?php the_content(); ?>
-							<?php the_content(); ?>
-							<?php the_content(); ?>
-							<?php the_content(); ?>
-							<?php the_content(); ?>
-							<?php the_content(); ?>
-						</div>
-					</div>
-				<?php endwhile; ?>
-			<?php else: ?>
-				<div class="article-grid__content">
-					<div class="mw-sm">
-							<?php get_template_part('templates/content/none'); ?>
-					</div>
+
+			<?php if (has_post_thumbnail()): ?>
+			<div class="article-grid__image">
+				<div class="mw-sm">
+					<figure class="mb-0">
+						<?php the_post_thumbnail('full', ['style' => 'object-fit: cover; max-height: 32rem; border-radius: var(--img-border-radius']); ?>
+					</figure>
 				</div>
+			</div>
+			<?php endif; ?>
+
+			<div class="article-grid__content">
+				<div class="mw-sm">
+					<?php the_content(); ?>
+					<?php the_content(); ?>
+					<?php the_content(); ?>
+					<?php the_content(); ?>
+					<?php the_content(); ?>
+					<?php the_content(); ?>
+				</div>
+			</div>
+			<?php endwhile; ?>
+			<?php else: ?>
+			<div class="article-grid__content">
+				<div class="mw-sm">
+					<?php get_template_part('templates/content/none'); ?>
+				</div>
+			</div>
 			<?php endif; ?>
 
 			<div class="article-grid__sidetop">
 				<p class="fw-bold text-sm text-uppercase"><time datetime="<?= get_the_date('c'); ?>"><?= esc_html(get_the_date('M. d Y')); ?></time> &bull; [5 min read]</p>
-					<?php if (!empty(get_the_terms($post->ID, 'tag'))): ?>
-					<div class="mb-4">
-						<?php get_template_part('templates/wp-block/post-terms', null, ['taxonomy' => 'post_tag', 'post' => $post]); ?>
-					</div>
-					<?php endif; ?>
+				<?php if (!empty(get_the_terms($post->ID, 'tag'))): ?>
+				<div class="mb-4">
+					<?php get_template_part('templates/wp-block/post-terms', null, ['taxonomy' => 'post_tag', 'post' => $post]); ?>
+				</div>
+				<?php endif; ?>
 
-					If author
+				If author
 			</div>
 			<div class="article-grid__sidebottom">
-				Sidebottom
+				<div class="article-grid__sidebottom-inner">
+					Sidebottom
+				</div>
 			</div>
 		</div>
 	</article>

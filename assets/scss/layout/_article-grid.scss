@@ -1,26 +1,41 @@
 .article-grid {
   display: grid;
   gap: 1.5rem;
+  align-items: start;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
     "title"
+    "image"
     "sidetop"
-    "sidebottom"
-    "content";
+    "content"
+    "sidebottom";
 
   @include media-breakpoint-up(sm) {
     gap: 2rem 3rem;
     grid-template-columns: 1.4fr 0.6fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto .75fr 1fr;
     grid-template-areas:
       "title title"
+      "image image"
       "content sidetop"
+      "content sidebottom";
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-areas:
+      "title title"
+      "image sidetop"
+      "content sidebottom"
       "content sidebottom";
   }
 
   &__title {
     grid-area: title;
+  }
+
+  &__image {
+    grid-area: image;
   }
 
   &__content {
@@ -29,48 +44,42 @@
 
   &__sidetop {
     grid-area: sidetop;
-    align-self: self-start;
 
     @include media-breakpoint-up(lg) {
-      transform: translateY(-40%);
-      z-index: 2;
+      margin-block-start: 75%;
     }
   }
 
   &__sidebottom {
     grid-area: sidebottom;
+
+
+    @include media-breakpoint-up(sm) {
+      height: calc(100% - 25%);
+      margin-top: 25%;
+
+      .article-grid__sidebottom-inner {
+        position: sticky;
+        top: 50%;
+        border-top: 10px solid blue;
+      }
+    }
   }
 }
 
-// display: grid;
-// grid-template-columns: [alignfull-start] minmax(0, 1fr) [alignwide-start] minmax(0, var(--alignwide-size)) [content-start] min(100% - var(--padding-inline),
-//     var(--content-max-width)) [content-end] minmax(0, var(--alignwide-size)) [alignwide-end] minmax(0, 1fr) [alignfull-end];
+// &::before {
+//   content: "";
+//   z-index: -1;
+//   background-color: var(--blue-100);
+//   display: block;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 8%;
+//   transition: bottom .2s ease;
 
-// @include media-breakpoint-up(sm) {
-//   grid-template-columns: [alignfull-start] minmax(0, 1fr) [alignwide-start] minmax(0, var(--alignwide-size)) [content-start] min(100% - (var(--padding-inline) * 2),
-//       var(--content-max-width)) [content-end] minmax(0, var(--alignwide-size)) [alignwide-end] minmax(0, 1fr) [alignfull-end];
-// }
-// }
-
-// .page-grid> :not(.alignwide, .alignfull),
-// .alignfull> :not(.alignwide, .alignfull) {
-//   grid-column: content;
-// }
-
-// .page-grid>.alignfull {
-//   grid-column: alignfull;
-//   display: grid;
-//   grid-template-columns: inherit;
-// }
-
-// .page-grid>.alignwide,
-// .alignfull>.alignwide {
-//   grid-column: alignwide;
-// }
-
-// /* Fix alignment when nesting groups so we can still organize the editor and have alignside for children. */
-// .page-grid>.wp-block-group .wp-block-group.alignwide {
-//   margin-left: calc(var(--alignwide-size) * -1) !important;
-//   margin-right: calc(var(--alignwide-size) * -1) !important;
-//   width: calc(100% + (var(--alignwide-size) * 2));
+//   @include media-breakpoint-up(lg) {
+//     bottom: 12%;
+//   }
 // }

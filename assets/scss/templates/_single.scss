@@ -1,22 +1,26 @@
-.single-post {
+// .single-post {
 
-	// Blue background
-	main .article-grid__title {
-		position: relative;
-		z-index: 1;
+// 	// Blue background
+// 	main .article-grid__sidetop {
+// 		// position: relative;
+// 		z-index: 1;
 
-		&::before {
-			content: "";
-			z-index: -1;
-			background-color: var(--blue-100);
-			width: calc(100vw + 100%);
-			height: 75%;
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: -100%;
-			overflow: hidden;
-		}
-	}
-}
+// 		&::before {
+// 			content: "";
+// 			z-index: -1;
+// 			background-color: var(--blue-300);
+// 			height: 100%;
+// 			display: block;
+// 			position: absolute;
+// 			left: 0;
+// 			right: 0;
+// 			transform: translateY(-100%);
+// 			// bottom: -100%;
+// 			// overflow: hidden;
+
+// 			// @include media-breakpoint-up(lg) {
+// 			// 	height: 16%;
+// 			// }
+// 		}
+// 	}
+// }
