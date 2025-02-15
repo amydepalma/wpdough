@@ -1,17 +1,17 @@
 /* Normalize reset and core helpers */
-@import "reset";
-@import "functions";
-@import "variables";
-@import "mixins";
+// @import "reset";
+// @import "functions";
+// @import "variables";
+// @import "mixins";
 
 /* Layout */
-@import "layout/sectioning";
-@import "layout/article-grid";
-@import "layout/page-grid";
+// @import "layout/sectioning";
+// @import "layout/article-grid";
+// @import "layout/page-grid";
 
 /* Content */
-@import "content/typography";
-@import "content/badge";
+// @import "content/typography";
+// @import "content/badge";
 // @import "content/buttons";
 
 /* Components */
@@ -21,23 +21,23 @@
 
 
 /* Wordpress Blocks */
-@import "wp-block/post-template";
+// @import "wp-block/post-template";
 // @import "wp-block/media-text";
 // @import "wp-block/image";
-@import "wp-block/post-terms";
+// @import "wp-block/post-terms";
 // @import "wp-block/post";
 // @import "wp-block/query-pagination";
 
 /* Utilities */
-@import "utilities/colors";
-@import "utilities/display";
-@import "utilities/layout";
-@import "utilities/media";
-@import "utilities/miscs";
-@import "utilities/spacing";
-@import "utilities/text";
+// @import "utilities/colors";
+// @import "utilities/display";
+// @import "utilities/layout";
+// @import "utilities/media";
+// @import "utilities/miscs";
+// @import "utilities/spacing";
+// @import "utilities/text";
 
 /* Plugins */
 
 /* Templates */
-@import "templates/single";
+// @import "templates/single";

@@ -29,13 +29,13 @@
 	}
 }
 
-.page-padding {
-	padding-inline: calc(var(--padding-inline) * .5);
+// .page-padding {
+// 	padding-inline: calc(var(--padding-inline) * .5);
 
-	@include media-breakpoint-up(sm) {
-		padding-inline: var(--padding-inline);
-	}
-}
+// 	@include media-breakpoint-up(sm) {
+// 		padding-inline: var(--padding-inline);
+// 	}
+// }
 
 // Margin
 .m-auto {

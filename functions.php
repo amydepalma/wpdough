@@ -13,17 +13,10 @@ define('LOCAL_DOMAIN', 'wpdough.local');
 /**
  * Includes
  */
-if(!is_child_theme()){
-	array_map(function ($file) {
-		$filepath = "/includes/{$file}.php";
-		require_once(get_stylesheet_directory() . $filepath);
-	}, ['utilities', 'blocks', 'post-types', 'taxonomies']);
-} else {
-	array_map(function ($file) {
-		$filepath = "/includes/{$file}.php";
-		require_once(get_template_directory() . $filepath);
-	}, ['utilities', 'blocks', 'post-types', 'taxonomies']);
-}
+array_map(function ($file) {
+	$filepath = "/includes/{$file}.php";
+	require_once(get_template_directory() . $filepath);
+}, ['utilities', 'post-types', 'taxonomies']);
 
 
 /**
